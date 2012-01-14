@@ -1,6 +1,6 @@
-var AKQA = AKQA || {};
+var HTML5FORM = HTML5FORM || {};
 
-AKQA.form = Class.create({
+HTML5FORM.form = Class.create({
 
     options: {},
     fields: [],
@@ -27,7 +27,7 @@ AKQA.form = Class.create({
         var _self = this;
 
         _self.options = Object.extend({
-            fieldValidator:      AKQA.fieldValidator,
+            fieldValidator:      HTML5FORM.fieldValidator,
             onSubmit:            _self.validate,
             onValidationSuccess: function() { }
         }, options);
@@ -109,7 +109,7 @@ AKQA.form = Class.create({
     }
 });
 
-AKQA.fieldValidator = Class.create({
+HTML5FORM.fieldValidator = Class.create({
 
     initialize: function(field) {
         this.pattern   = field.pattern;
