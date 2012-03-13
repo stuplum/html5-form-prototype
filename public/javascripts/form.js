@@ -15,7 +15,7 @@ HTML5FORM.Form = Class.create({
         }
 
         self.form = $(self.options.formId); // cache the FormHTMLElement
-console.log(self.form, self.options.formId);
+
         self._addNoValidateAttr(); // Add novalidate attribute to stop built in html5 validation
 
         self.form.select('input:not([type="submit"])').each(function(el) { // select inputs from within the form that should be validated
