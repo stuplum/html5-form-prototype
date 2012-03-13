@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>HTML5 Form - Prototype.js</title>
+
+        <link href="css/style.css" rel="stylesheet">
+        <script src="javascripts/lib/prototype.1.7.js"></script>
+        <script src="javascripts/form.js"></script>
+
+        <script>
+            (function() {
+                var form = new HTML5FORM.Form();
+
+                console.log(form);
+            })();
+        </script>
+    </head>
+    <body>
+        <form>
+            <label>url: <input type="url" required="required" /></label>
+            <label>email: <input type="email" required="required" /></label>
+            <label>tel: <input type="tel" required="required" /></label>
+            <label>number: <input type="number" required="required" /></label>
+        </form>
+    </body>
+</html>
