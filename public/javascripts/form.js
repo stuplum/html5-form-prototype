@@ -15,7 +15,7 @@ HTML5FORM.Form = Class.create({
         }
 
         self.form = $(self.options.formId); // cache the FormHTMLElement
-
+console.log(self.form, self.options.formId);
         self._addNoValidateAttr(); // Add novalidate attribute to stop built in html5 validation
 
         self.form.select('input:not([type="submit"])').each(function(el) { // select inputs from within the form that should be validated
@@ -28,19 +28,19 @@ HTML5FORM.Form = Class.create({
     },
 
     _createOptionsObjectFromArguments: function(options) {
-        var _self = this;
+        var self = this;
 
-        _self.options = Object.extend({
+        self.options = Object.extend({
             fieldValidator:      HTML5FORM.fieldValidator,
-            onSubmit:            _self.validate,
+            onSubmit:            self.validate,
             onValidationSuccess: function() { }
         }, options);
     },
 
     _addNoValidateAttr: function() {
-        var _self = this;
+        var self = this;
 
-        _self.form.writeAttribute('novalidate', 'novalidate');
+        self.form.writeAttribute('novalidate', 'novalidate');
     },
 
     _registerFields: function(element) {

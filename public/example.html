@@ -9,15 +9,15 @@
         <script src="javascripts/form.js"></script>
 
         <script>
-            (function() {
-                var form = new HTML5FORM.Form();
-
-                console.log(form);
-            })();
+            Event.observe(window, 'dom:loaded', function() {
+                var form = new HTML5FORM.Form({
+                    formId: 'testForm'
+                });
+            });
         </script>
     </head>
     <body>
-        <form>
+        <form id="testForm">
             <label>url: <input type="url" required="required" /></label>
             <label>email: <input type="email" required="required" /></label>
             <label>tel: <input type="tel" required="required" /></label>
